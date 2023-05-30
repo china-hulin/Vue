@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head {
+            text-align: center;
+        }
+        #ip {
+            text-align: center;
+            font-weight: 700;
+            font-size: 50px;
+        }
+        img {
+            /* width: 200px; */
+            height: 300px;
+        }
+        button {
+            background-color: #40fa11;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ffffff00;
+            font-size: 30px;
+        }
+        button:hover {
+            background-color: #f90808;
+        }
+    </style>
+    <script>
+        var count=0
+        function a(){
+            // document.getElementById("ip").innerHTML = ++count;
+            document.getElementById("ip").innerText = ++count;
+        }
+        function b(){
+            document.getElementById("img").style.visibility=count % 2 ==0 ? "hidden":"visible"
+        }
+    </script>
+</head>
+<body>
+    <div id="head">
+        <div class="head" id="ip">数值:0</div>
+        <img id="img" src="../web/imag/头部背景图.jpg" alt="">
+        <button onclick="a()">点击计数</button>
+        <button onclick="b()">隐藏图片</button>
+    </div>
+</body>
+</html>
