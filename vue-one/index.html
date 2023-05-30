@@ -52,9 +52,11 @@
                     // 判断账号密码是否为空
                     if (this.userName.length > 0 && this.password.length > 0) {
                         // 登录提示后刷新页面
-                        alert('userNmae:${this.userName} password:${this.password}')
+                        // alert(`userNmae:${this.userName} password:${this.password}`)   与如下语句等价
+                        alert('账号为:'+this.userName)
                         this.noLogin = false
-                        this.title = '欢迎您:${this.userName}'
+                        // this.title = `欢迎您:${this.userName}`   与如下语句等价
+                        this.title = '欢迎您:'+this.userName
                         this.buttonTitle = "注销"
                         this.userName = ""
                         this.password = ""
