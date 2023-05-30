@@ -18,7 +18,13 @@
         <!-- 密码输入框 -->
         <div v-if="noLogin">密码：<input v-model="password" type="password" /></div>
         <!-- 登录按钮 -->
-        <div v-on:click="click" style="border-radius: 30px; width: 100px; margin: 20px auto; color: white; background-color: blue;">{{buttonTitle}}</div>
+        <button v-on:click="click" style="border-radius: 30px; 
+                width: 100px; 
+                margin: 20px auto; 
+                color: white; 
+                background-color: blue;"
+                >{{buttonTitle}}
+        </button>
     </div>
 </body>
 <script>
@@ -46,9 +52,9 @@
                     // 判断账号密码是否为空
                     if (this.userName.length > 0 && this.password.length > 0) {
                         // 登录提示后刷新页面
-                        alert(`userNmae:${this.userName} password:${this.password}`)
+                        alert('userNmae:${this.userName} password:${this.password}')
                         this.noLogin = false
-                        this.title = `欢迎您:${this.userName}`
+                        this.title = '欢迎您:${this.userName}'
                         this.buttonTitle = "注销"
                         this.userName = ""
                         this.password = ""
@@ -60,8 +66,8 @@
                 logout() {
                     // 清空登录数据
                     this.noLogin = true
-                    this.title = `欢迎您:未登录`
-                    this.buttonTitle = "登录"
+                    this.title = '欢迎您:未登录'
+                    this.buttonTitle = '登录'
                 }
             }
         }
